@@ -259,7 +259,17 @@ const slider = function () {
   };
 
   // Next slide
-  
+  const nextSlide = function () {
+    if (curSlide === maxSlide - 1) {
+      curSlide = 0;
+    } else {
+      curSlide++;
+    }
+
+    goToSlide(curSlide);
+    activateDot(curSlide);
+  };
+
   const prevSlide = function () {
     if (curSlide === 0) {
       curSlide = maxSlide - 1;
